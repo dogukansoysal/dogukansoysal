@@ -28,7 +28,7 @@ a:hover, a:active{
 }
 
 .body{
-	margin: 40px auto;
+	margin: 50px auto;
 	width: 90%;
 	clear: both;
 
@@ -68,8 +68,9 @@ a:hover, a:active{
 
 .mainHeader nav a:hover, .mainHeader nav a:active
 .mainHeader nav .active a:link, .mainHeader nav .active a:visited{
-	background-color: #CF5C3F;
+	background-color:  rgba(51, 153, 255,0.5);
 	text-shadow: none;
+    border-radius: 10px;
 }
 
 #home { 
