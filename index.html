@@ -1,0 +1,702 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Doğukan SOYSAL - Game Portfolio</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="402ef514-5b9e-4eb7-90ac-1f83d98215c3" class="page sans"><header><h1 class="page-title">Doğukan SOYSAL - Game Portfolio</h1><p class="page-description"></p></header><div class="page-body"><p id="43e6e262-4079-4843-8d4a-1ee440c4fa9c" class=""><em>Detailed Portfolio: </em><a href="https://app.sensortower.com/ios/publisher/publisher/1618401398"><em>https://app.sensortower.com/ios/publisher/publisher/1618401398</em></a></p><p id="2584ba6c-2eab-446d-b2a9-6cdd31f5fa5c" class="">
+</p><p id="3bb276f0-4f14-4822-9bdd-d1473f850d7d" class=""><strong>Title </strong>: Robber’s Paradise</p><p id="fb4d66c8-b5a1-4129-bdf3-f567606ae9c2" class=""><strong>Role </strong>: Game Developer</p><figure id="1364dfc2-a278-41bf-813f-d86fe2bc7a97" class="image"><a href="https://lh5.googleusercontent.com/IEydkeWtbVWsWJt2hG8dUlrvJfcBG-Kz5fYbootoBXzViFOfzOoerfNtW2Eu6sXvTyDvarHInwGy7r_GaplvHZkye1tcul3q-OBIdJwR1tre9YmPaPSF8hB9SX6yl91_MbZw_dntHnuB6u3kNCs14c4"><img style="width:500px" src="https://lh5.googleusercontent.com/IEydkeWtbVWsWJt2hG8dUlrvJfcBG-Kz5fYbootoBXzViFOfzOoerfNtW2Eu6sXvTyDvarHInwGy7r_GaplvHZkye1tcul3q-OBIdJwR1tre9YmPaPSF8hB9SX6yl91_MbZw_dntHnuB6u3kNCs14c4"/></a></figure><figure id="f702dd66-111d-47d7-a436-54cb5d5fb9bc" class="image"><a href="https://lh6.googleusercontent.com/qxy47HaLPljYdPRQ8JOisTFzkmHgS_gErYLiJeqAXYXH3LBQ159xlhirJYf4-oc22xJrzJCLPDRIbIK9ENMGAVVAKdQ6RAOaWqLvcvB4Gs-jdpuO2fbuLapqg1HQxF_J6NnNwLNR9C0fm_hnkZDSX2k"><img style="width:631px" src="https://lh6.googleusercontent.com/qxy47HaLPljYdPRQ8JOisTFzkmHgS_gErYLiJeqAXYXH3LBQ159xlhirJYf4-oc22xJrzJCLPDRIbIK9ENMGAVVAKdQ6RAOaWqLvcvB4Gs-jdpuO2fbuLapqg1HQxF_J6NnNwLNR9C0fm_hnkZDSX2k"/></a></figure><p id="6077154e-ec06-4227-958d-3f86537c5f55" class="">
+</p><hr id="25261e40-696d-43b3-9966-291b44464f98"/><p id="2bdb175b-6c2b-408e-a137-322b0ea4e7e2" class="">
+</p><p id="51abf52e-0149-41e9-be77-403056e1a44f" class=""><strong>Title </strong>: Roll to Match</p><p id="6ee80a1f-80c5-4d61-bedb-f4681d703996" class=""><strong>Role </strong>: Game Developer</p><figure id="6005ab05-28c0-480a-ab55-e40136f25bb9" class="image"><a href="https://lh4.googleusercontent.com/0g9imNGyFs0jrb8R7qM3hFWpRGgkIWXi5dXl3vot3-H3lpEre0sW6YW-pX_Xv40nQm-LC91cIeTDSgsiTO5Yr2ikuIwMx6Zih6Fcm5isejhAw0RGmK8fNMSOfDI6m9lDroDDRZ4gaBNlhZ5Kx6hDgE0"><img style="width:700px" src="https://lh4.googleusercontent.com/0g9imNGyFs0jrb8R7qM3hFWpRGgkIWXi5dXl3vot3-H3lpEre0sW6YW-pX_Xv40nQm-LC91cIeTDSgsiTO5Yr2ikuIwMx6Zih6Fcm5isejhAw0RGmK8fNMSOfDI6m9lDroDDRZ4gaBNlhZ5Kx6hDgE0"/></a></figure><figure id="b7c1087c-7e86-4f2d-a00f-bc27f1c8179c" class="image"><a href="https://lh3.googleusercontent.com/cqHeoXEIIJKR153_-2QzRn3uctTi0cJ7qYPbdVlrgqgZecuCRbx_cdvQJ9DcE31JNltqVB2TVWDt1Hkpwrhm7K5emXDZ4-mTiN1KrxkC8Pz987KzvgoASw8EXas_93lywt-Y1M9kOxyyp4HXA1NQiRA"><img style="width:700px" src="https://lh3.googleusercontent.com/cqHeoXEIIJKR153_-2QzRn3uctTi0cJ7qYPbdVlrgqgZecuCRbx_cdvQJ9DcE31JNltqVB2TVWDt1Hkpwrhm7K5emXDZ4-mTiN1KrxkC8Pz987KzvgoASw8EXas_93lywt-Y1M9kOxyyp4HXA1NQiRA"/></a></figure><p id="fbeeaf18-50c0-47e2-9840-975280dce63b" class="">
+</p><hr id="0208e6c7-b478-456f-b58d-594775e4440c"/><p id="01f0a990-83ed-48ca-9925-f077755cb81a" class="">
+</p><p id="25776994-875b-4bf2-993e-52d86dc1c51f" class=""><strong>Title </strong>: My Mini Collection</p><p id="555ff08f-d0e4-4130-8753-3b71243226a7" class=""><strong>Role </strong>: Game Developer</p><figure id="7d899768-63d7-40cf-9e02-970d5161b954" class="image"><a href="https://lh6.googleusercontent.com/RouemE2Ytr9i7OfrJ6V1eSiuGHKiPts46ww3kIRLphzmAKqd8WPXTj5bAGztcnLh122Ye3Hy9whU0LgOw5roSA6B-kSJ0wVcrc66iczCPayd2YCTEGsuCZKehHmsQh2HW4-lUc8R6eF0FQs2tfLqU6M"><img style="width:614px" src="https://lh6.googleusercontent.com/RouemE2Ytr9i7OfrJ6V1eSiuGHKiPts46ww3kIRLphzmAKqd8WPXTj5bAGztcnLh122Ye3Hy9whU0LgOw5roSA6B-kSJ0wVcrc66iczCPayd2YCTEGsuCZKehHmsQh2HW4-lUc8R6eF0FQs2tfLqU6M"/></a></figure><figure id="0096857e-98fd-44e7-a6ff-3fa9a2dbc08a" class="image"><a href="https://lh5.googleusercontent.com/5lFdflYHVpMZCQ-RZfULPijWRezQgVYarCXCXrIQH7Q7yyVuty2Nq9xrWtaV23VH67eKmQBCwuhH6z50oj-yJIytpQKSwdImWzihDGzyWkW7A4pUvJFJ_60IFXbhHZFYc1F_cYPfxqz0BFyTN4J0Vb8"><img style="width:612px" src="https://lh5.googleusercontent.com/5lFdflYHVpMZCQ-RZfULPijWRezQgVYarCXCXrIQH7Q7yyVuty2Nq9xrWtaV23VH67eKmQBCwuhH6z50oj-yJIytpQKSwdImWzihDGzyWkW7A4pUvJFJ_60IFXbhHZFYc1F_cYPfxqz0BFyTN4J0Vb8"/></a></figure><p id="20578ba9-4df8-4782-8f9a-705860f90c91" class="">
+</p><hr id="acd56af8-d880-4152-b17d-2d166c97f30e"/><p id="89b50130-9ce6-46b0-8410-c6c3354d419b" class="">
+</p><p id="8da17ac4-c80e-44e9-ad97-e526e01bb78a" class=""><strong>Title </strong>: T-Match</p><p id="047b8ad0-2eb6-41c1-92f4-8c5827f41da6" class=""><strong>Role </strong>: Game Developer</p><figure id="89a76a12-0ae9-46dd-903c-674d90f6c02b" class="image"><a href="https://lh4.googleusercontent.com/eBaWlqzVFeMj4bQdBfBpKaQtHff70msltJUGQxBi2c4orvY4v8WWis-PVAUdnpF0ZwVldKL_mhxlQNp3ANRyneBYkVULFk6ExVC2XfOuPY391BFbwnG4wDaLlKs7pS4y4ANrWUO40NZzTm2rqum5bVM"><img style="width:599px" src="https://lh4.googleusercontent.com/eBaWlqzVFeMj4bQdBfBpKaQtHff70msltJUGQxBi2c4orvY4v8WWis-PVAUdnpF0ZwVldKL_mhxlQNp3ANRyneBYkVULFk6ExVC2XfOuPY391BFbwnG4wDaLlKs7pS4y4ANrWUO40NZzTm2rqum5bVM"/></a></figure><figure id="94b41973-28df-4743-aca0-eefa0d29db49" class="image"><a href="https://lh3.googleusercontent.com/NrHKxbQmceXgSciRhPlBhpBsogvlTg3NjAIiYrVj680ZXBtkRWZGqxPQIfz9Yshaf3RVO-2jXfDs49yXZhBrXCpeJtavZvrgqFhmslqciFrYwvuVqobrAo-ERFnX6TnWLUnvcchUFxini9aDrbsF-Cw"><img style="width:616px" src="https://lh3.googleusercontent.com/NrHKxbQmceXgSciRhPlBhpBsogvlTg3NjAIiYrVj680ZXBtkRWZGqxPQIfz9Yshaf3RVO-2jXfDs49yXZhBrXCpeJtavZvrgqFhmslqciFrYwvuVqobrAo-ERFnX6TnWLUnvcchUFxini9aDrbsF-Cw"/></a></figure><p id="6f17b16f-d018-4125-a4a9-a78948759b40" class="">
+</p><hr id="9dcd09ea-b4d2-42eb-aefa-1dbc71869a3c"/><p id="e7b4fe54-1d3d-46d3-bce0-a64caee7cde1" class="">
+</p><p id="cb1cf353-1b43-41f4-b07d-5c6853309c26" class=""><strong>Title </strong>: Road Bender 3D</p><p id="f75eb433-e170-4be9-988c-34310eba295e" class=""><strong>Role </strong>: Game Developer</p><figure id="619432a4-0cad-4f74-8d83-8eebc1911a9c" class="image"><a href="https://lh3.googleusercontent.com/aY2Io9sNhGKaXrvDL8kXrnf0I8SZ_dsSXv3Qmbam4r0_IavdiXTe5mYGR4CX6TiSpqZeE6uDn9-PfG6ZKrzhYEiAF06XiZgTlzIlDxv-871PhZHZezVNRSaSQ-aa2vqeSikZ-vDzntwm-0Or7IzKd7A"><img style="width:621px" src="https://lh3.googleusercontent.com/aY2Io9sNhGKaXrvDL8kXrnf0I8SZ_dsSXv3Qmbam4r0_IavdiXTe5mYGR4CX6TiSpqZeE6uDn9-PfG6ZKrzhYEiAF06XiZgTlzIlDxv-871PhZHZezVNRSaSQ-aa2vqeSikZ-vDzntwm-0Or7IzKd7A"/></a></figure><figure id="7bf8031a-8f6a-451a-9311-4740bd5a770e" class="image"><a href="https://lh4.googleusercontent.com/oZm1yxA7ldVN6Hh2DnRF7K0BVOefugjG6b-VTyQPGJtBXU_bPk-qJg6rReHKMygWNWdObnD8lOam5Q6_tKGunYMaWwmsV-XrQHN1JniBiQ50snqXavpqdcIMS5I7XyIxIQQ7_vQlaRoE4e_6Roxhxs0"><img style="width:620px" src="https://lh4.googleusercontent.com/oZm1yxA7ldVN6Hh2DnRF7K0BVOefugjG6b-VTyQPGJtBXU_bPk-qJg6rReHKMygWNWdObnD8lOam5Q6_tKGunYMaWwmsV-XrQHN1JniBiQ50snqXavpqdcIMS5I7XyIxIQQ7_vQlaRoE4e_6Roxhxs0"/></a></figure><p id="ee4a6d97-5986-4733-abf6-c17acf4426a4" class="">
+</p><hr id="e5a859f6-40d7-420e-bc46-f8d83f222ad6"/><p id="8e9bd5ac-89a7-420f-97f1-7893e33641dc" class="">
+</p><p id="54f750db-0311-41a7-a530-b5c76cdfd0e7" class=""><strong>Title </strong>: Fill the Color!</p><p id="ba8b83e0-4a97-4ed2-aaf8-b2b7fe13386f" class=""><strong>Role </strong>: Game Developer</p><figure id="31764f3c-801f-4342-b313-f4a394fa2c08" class="image"><a href="https://lh6.googleusercontent.com/IjAhic-3RkobmS6ruyHemDNCocngWl7DyO9f65qvT7dW2nOAsk1fSVAvb0lmEvEae1phlSpukMlJr3kk2ZR3Lmntd39V6dfWAFLx_dus50BKXDBkv6JUlqOm_YfiKXDCEhkXsIbGnU9jlZpeBYNo0S8"><img style="width:617px" src="https://lh6.googleusercontent.com/IjAhic-3RkobmS6ruyHemDNCocngWl7DyO9f65qvT7dW2nOAsk1fSVAvb0lmEvEae1phlSpukMlJr3kk2ZR3Lmntd39V6dfWAFLx_dus50BKXDBkv6JUlqOm_YfiKXDCEhkXsIbGnU9jlZpeBYNo0S8"/></a></figure><figure id="9554cac4-c35a-4afd-a2f3-db54c40ffd44" class="image"><a href="https://lh6.googleusercontent.com/pxI0cY1ETVVWVnz1i5Vkm2dx1he89IUSvz78hgHKIOFnYFYAR2LGD2_DBKcpNoh6wTycVSwDer412duAWtYlyEpxhwiJUbswpuCgbR1Hf3vmoPaRxzB3l_5m9qQn5X3I7MmvISxX5_beMIy4hEW0zf0"><img style="width:622px" src="https://lh6.googleusercontent.com/pxI0cY1ETVVWVnz1i5Vkm2dx1he89IUSvz78hgHKIOFnYFYAR2LGD2_DBKcpNoh6wTycVSwDer412duAWtYlyEpxhwiJUbswpuCgbR1Hf3vmoPaRxzB3l_5m9qQn5X3I7MmvISxX5_beMIy4hEW0zf0"/></a></figure><p id="5c87221c-a2c8-4929-b3f4-31c678c01818" class="">
+</p><hr id="90af0ce1-68fb-45c9-bc28-83209d7577a1"/><p id="7a774df6-8c78-4af0-81c8-78ebb69a1238" class="">
+</p><p id="c1bdad91-3598-4fe7-9aeb-7b2341bcd435" class=""><strong>Title </strong>: Beauty Style 3D</p><p id="a2a9b148-5954-4069-8837-f0d0eab17457" class=""><strong>Role </strong>: Game Developer</p><figure id="ac8cd403-b796-44e8-be00-4298e1836d61" class="image"><a href="https://lh5.googleusercontent.com/DbwiaGF79kgUBsYo1zXohFzusoTCExZP8dfCzZ4MIRdfcRe6oHDvhyeHtlcJN7-Olz2GrD-7Cz447VQ7misLIzxyX7seiOf47aKqsr_ZNuE8TYjp2tVb0lSehob_9B2JniKuZka72fo_w07MatFWato"><img style="width:620px" src="https://lh5.googleusercontent.com/DbwiaGF79kgUBsYo1zXohFzusoTCExZP8dfCzZ4MIRdfcRe6oHDvhyeHtlcJN7-Olz2GrD-7Cz447VQ7misLIzxyX7seiOf47aKqsr_ZNuE8TYjp2tVb0lSehob_9B2JniKuZka72fo_w07MatFWato"/></a></figure><p id="59581e1d-8c3b-4a2a-989c-6accc1ad5adb" class="">
+</p><hr id="7ed142cf-7e51-4201-a931-2212c7291efb"/><p id="cc916ac3-96d9-4f2c-81ce-eb158092ddfb" class="">
+</p><p id="9f44d90b-0301-4878-982c-d8412628947c" class=""><strong>Title </strong>: Drag and Race!</p><p id="6de89995-6189-4a2c-a20c-90732d50fd5f" class=""><strong>Role </strong>: Game Developer</p><figure id="b354bcf9-4561-42cf-8db3-2741593e9f25" class="image"><a href="https://lh5.googleusercontent.com/iAsZAzsuyJtvPbqyOYfTLbZx95NmSjlVGWySGE0dD-azzlmFdp6E4awOr-ZnFTG5vyGiJ6PTsTDXg5X72N2d5R153qSOMY8DHeRWlMrdhOjGfR00InruSMo37K74Arrp5xlvDUXRlRxGcFMBYy9K8GQ"><img style="width:623px" src="https://lh5.googleusercontent.com/iAsZAzsuyJtvPbqyOYfTLbZx95NmSjlVGWySGE0dD-azzlmFdp6E4awOr-ZnFTG5vyGiJ6PTsTDXg5X72N2d5R153qSOMY8DHeRWlMrdhOjGfR00InruSMo37K74Arrp5xlvDUXRlRxGcFMBYy9K8GQ"/></a></figure><p id="c21e4114-a1d1-4687-9f72-3a00243f650a" class="">
+</p><hr id="ed93edab-92dc-4a21-9de9-2ed2401a5344"/><p id="56dcec52-41e0-4a08-bcf1-303aa13716ce" class="">
+</p><p id="a2e97307-20ba-43bc-a880-3bf7211aafb4" class=""><strong>Title </strong>: Ghost Escape!</p><p id="4bd08eae-b3a3-4764-889e-d6d2b607d77c" class=""><strong>Role </strong>: Game Developer</p><figure id="dac8796f-969a-4fe2-a830-da11ac2ccd40" class="image"><a href="https://lh5.googleusercontent.com/NeGT9AHBr1zCVThmDvhK5S5Iv7yXihekBJszmKGR_Y6_f5uccnlqwQgKiEujZ0hvRzDpCYurjcxEpeVWWuQxG-Q72wPsKjNE_sZvaaSl26dpVQvS_sODbcFtJzeszoRYOJPNlpNmSoqGKBMdh0tuuLQ"><img style="width:700px" src="https://lh5.googleusercontent.com/NeGT9AHBr1zCVThmDvhK5S5Iv7yXihekBJszmKGR_Y6_f5uccnlqwQgKiEujZ0hvRzDpCYurjcxEpeVWWuQxG-Q72wPsKjNE_sZvaaSl26dpVQvS_sODbcFtJzeszoRYOJPNlpNmSoqGKBMdh0tuuLQ"/></a></figure><p id="67017a09-0cbf-4b34-ad84-92a52da33a26" class="">
+</p><hr id="3f5329d5-4388-4743-9ae3-0c9773a00749"/><p id="0172e5ac-6380-4fca-9fdb-21ea462e1716" class="">
+</p><p id="ced53a70-3d97-4e87-a2da-51c08c8c5ca3" class=""><strong>Title </strong>: ZigZag Race!</p><p id="0b9394a1-bfb4-4e2f-8b4d-98f2d8d05521" class=""><strong>Role </strong>: Game Developer</p><figure id="72bc5a8a-36ad-4ee3-a659-895304b6cec6" class="image"><a href="https://lh5.googleusercontent.com/6r9wRNm6y6Uhrilplw15Ep7H1ps1cHv1YK6BjxetXz22J7Ymq_47uRct-UIguMdlHgvNe0um_yUZf3Vi9ifGf-JHp-G92rn_7MKjXvKzjVFb8Rv173f0nJo_y0csiYH2pHLHylp6RguJnwBZ3YbRY3w"><img style="width:622px" src="https://lh5.googleusercontent.com/6r9wRNm6y6Uhrilplw15Ep7H1ps1cHv1YK6BjxetXz22J7Ymq_47uRct-UIguMdlHgvNe0um_yUZf3Vi9ifGf-JHp-G92rn_7MKjXvKzjVFb8Rv173f0nJo_y0csiYH2pHLHylp6RguJnwBZ3YbRY3w"/></a></figure><p id="23a23044-e1c9-49e0-bba9-4a44c23b76ae" class="">
+</p><hr id="e3e7ebc7-1446-4922-9297-5fb9f325d076"/><p id="7427a58e-0d2c-494f-bd1d-2beec9b82e7f" class="">
+</p><p id="493d17d6-aa5c-4080-87f7-e4e5712ecd38" class=""><strong>Title </strong>: Crazy Taxi Driver!</p><p id="088800c5-eafd-4b75-9be9-d753ed6e7888" class=""><strong>Role </strong>: Game Developer</p><figure id="fa0ac4ac-fe50-4cb5-991f-9fcc141031a0" class="image"><a href="https://lh3.googleusercontent.com/LWp3to06fyS-aVnaiMqlz8edV6acmWWI6otYcO6leYi-Zmu3lKjEXVR-1AYJ8rCeiwSCvU0hI9atoCF0XluqyPW2bTe43Nv_SZI9_oOFCYBOv6iMRSI3bu39tX6993RmH6EvaETSVeff1eXoQmFgJyc"><img style="width:624px" src="https://lh3.googleusercontent.com/LWp3to06fyS-aVnaiMqlz8edV6acmWWI6otYcO6leYi-Zmu3lKjEXVR-1AYJ8rCeiwSCvU0hI9atoCF0XluqyPW2bTe43Nv_SZI9_oOFCYBOv6iMRSI3bu39tX6993RmH6EvaETSVeff1eXoQmFgJyc"/></a></figure><figure id="24dbba93-1379-47b0-b66f-29a6888a494f" class="image"><a href="https://lh4.googleusercontent.com/i2BzYUiHHIXUoDz3MB_ma3c9KHTZzoylfRS5a0YDWyWuadEg7CNYIgDJmFepf6ogKM7PHQDCSMRxv2yXDm9KjRg9iEB5qqQZC3YghEb4BB4-dRQXYqLAkNUflSWtoy7DVC1-2C1HIJT-HGrtCYtaXH4"><img style="width:465px" src="https://lh4.googleusercontent.com/i2BzYUiHHIXUoDz3MB_ma3c9KHTZzoylfRS5a0YDWyWuadEg7CNYIgDJmFepf6ogKM7PHQDCSMRxv2yXDm9KjRg9iEB5qqQZC3YghEb4BB4-dRQXYqLAkNUflSWtoy7DVC1-2C1HIJT-HGrtCYtaXH4"/></a></figure><p id="3e61a86e-4e60-467e-a088-73fbc589ee97" class="">
+</p><hr id="5ed8bdb0-b6d0-4f97-ac04-db9fbc48b97e"/><p id="1a323be9-fd58-4d75-8278-a764476977b2" class="">
+</p><p id="c48e0406-f93f-447a-adea-cfee83e2c325" class=""><strong>Title </strong>: Guided Arrow!</p><p id="61737fd6-5095-411a-a62b-b1935422e26b" class=""><strong>Role </strong>: Game Developer</p><figure id="bb53a95e-9e21-492d-aa81-a46438c344c7" class="image"><a href="https://lh6.googleusercontent.com/IRZpPi0zHSFhCTDQazGzE4HOH3JsSzwqA6QppYvykkFqrwqvp8qdww7qYtyJOUCQfSeGLyLQOrzp4HBHpCKf2SbN_SdYAq_19I87iU5GYD5nmJKBmbiI3OvPU_u9m0SR6czz_ekBOi5XsA1tQpUrTCk"><img style="width:622px" src="https://lh6.googleusercontent.com/IRZpPi0zHSFhCTDQazGzE4HOH3JsSzwqA6QppYvykkFqrwqvp8qdww7qYtyJOUCQfSeGLyLQOrzp4HBHpCKf2SbN_SdYAq_19I87iU5GYD5nmJKBmbiI3OvPU_u9m0SR6czz_ekBOi5XsA1tQpUrTCk"/></a></figure><figure id="95eb71ae-33a4-45e4-acd6-7bf1a0abf083" class="image"><a href="https://lh6.googleusercontent.com/8wG_f6NMokbdeq4iRGKuhU_JiRP5tpjfHH9laL0g6gphvIwk_kpz8TNn5A-hupaf60Ga_mwzy94-Itii4qLL8iHTD3kudPymxfyiYEFR9fhJE9sTqPFRBWTDCt5xFjVSLjQf_JEJT9WlyaUspJLmy2Y"><img style="width:466px" src="https://lh6.googleusercontent.com/8wG_f6NMokbdeq4iRGKuhU_JiRP5tpjfHH9laL0g6gphvIwk_kpz8TNn5A-hupaf60Ga_mwzy94-Itii4qLL8iHTD3kudPymxfyiYEFR9fhJE9sTqPFRBWTDCt5xFjVSLjQf_JEJT9WlyaUspJLmy2Y"/></a></figure><p id="afff5f3e-24aa-4fb8-9a5a-754eee9b648b" class="">
+</p><hr id="5fa3485f-5ac8-4e5b-8989-fc8f93696a61"/><p id="41aaafe7-92bf-43e6-8c1a-a8e639e85ee7" class="">
+</p><p id="bdcd7b35-c4cb-4b64-97c9-bbe5fb7f0a80" class="">For more &amp; d<em>etailed portfolio: </em><a href="https://app.sensortower.com/ios/publisher/publisher/1618401398"><em>https://app.sensortower.com/ios/publisher/publisher/1618401398</em></a></p><p id="2dcf7dd1-ad06-46a5-8aa9-116a1f1ec186" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
